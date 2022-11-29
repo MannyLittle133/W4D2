@@ -9,6 +9,7 @@ class Employee
         
     end
 
+
     def bonus(multiplier)
         self.salary * multiplier
     end
@@ -17,11 +18,15 @@ end
 class Manager < Employee
     def initialize
         super(name, title, salary, boss)
-        @employee = []
+        @employees = []
+    end
+
+    def add_employee(employee)
+        @employees << employee
     end
 
     def bonus(multiplier)
-
+        
     end
 
 end
